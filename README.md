@@ -1,88 +1,24 @@
-# Weather App
+# Weather Prediction Using Machine Learning
 
-A complete weather application with frontend and backend components that displays current weather and 5-day forecast for any city.
+An end-to-end machine learning pipeline that forecasts daily temperature
+and rainfall from large historical climate datasets.
 
-## Features
-
-- Current weather display (temperature, description, humidity, wind speed)
-- 5-day weather forecast
-- Search by city name
-- Responsive design
-- Error handling
-- Loading states
+## Overview
+- Analyzes historical data to identify patterns, trends and anomalies
+- Cleans and validates real-world data
+- Engineers time-series features (rolling averages, seasonal trends)
+- Compares Random Forest and XGBoost using RMSE to choose the most reliable model
 
 ## Tech Stack
+Python, Pandas, Scikit-Learn, XGBoost
 
-### Backend
-- Node.js
-- Express.js
-- Axios (for API calls)
-- CORS
-- OpenWeatherMap API
+## Approach
+1. **Data cleaning and validation:** handle missing and inconsistent values in the raw climate data.
+2. **Feature engineering:** build rolling averages and seasonal-trend features from the time series.
+3. **Modeling:** train Random Forest and XGBoost models to predict temperature and rainfall.
+4. **Evaluation:** compare the models using RMSE and select the most reliable one.
 
-### Frontend
-- HTML5
-- CSS3 (with modern features)
-- Vanilla JavaScript
-- Responsive design
+## Author
+Ravipati Vijaya Lakshmi
 
-## Setup
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Get an API key from [OpenWeatherMap](https://openweathermap.org/api)
-
-3. Create a `.env` file in the backend directory:
-   ```
-   WEATHER_API_KEY=your_api_key_here
-   PORT=5000
-   ```
-
-4. Start the backend server:
-   ```bash
-   npm run server
-   ```
-
-5. Start the frontend (in a new terminal):
-   ```bash
-   npm run client
-   ```
-
-Or run both simultaneously:
-```bash
-npm run dev
-```
-
-## Usage
-
-1. Open your browser and navigate to `http://localhost:3000`
-2. Enter a city name in the search box
-3. Click "Search" or press Enter
-4. View the current weather and 5-day forecast
-
-## API Endpoints
-
-- `GET /api/weather/:city` - Get current weather for a city
-- `GET /api/forecast/:city` - Get 5-day forecast for a city
-
-## Project Structure
-
-```
-weather-app/
-├── backend/
-│   ├── server.js
-│   └── .env
-├── frontend/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-├── package.json
-└── README.md
-```
-
-## License
-
-MIT
+[LinkedIn](https://www.linkedin.com/in/vijaya-lakshmi-ravipati-b3103b346) | [GitHub](https://github.com/vijaya-a11y)
